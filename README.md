@@ -1,5 +1,5 @@
 # mm32_2019_ncov
-基于灵动半导体MM32的新冠肺炎疫情数据实时监控平台，通过串口和ESP8266进行AT指令交互，获取疫情实时数据，并通过TFT显示屏显示出来。
+[基于灵动半导体MM32的新冠肺炎疫情数据实时监控平台](http://www.wangchaochao.top/2020/06/27/mm32-2019-ncov/)，通过串口和ESP8266进行AT指令交互，获取疫情实时数据，并通过TFT显示屏显示出来。
 
 ![](https://wcc-blog.oss-cn-beijing.aliyuncs.com/img/200626/china.jpg)
 
@@ -35,31 +35,19 @@ WiFi账号和密码，及API信息保存在`USER\config.h`文件中。
 
 - WiFi模块
 
-UART2_RX-PA3
-UART2_TX-PA2
+UART2_RX-PA3/UART2_TX-PA2
 
 - TFT显示屏
 
-SCL - PA4
-SDA - PA5
-RES - PA6
-DC  - PA7
-CS  - PC4
-BL  - PC5
+SCL - PA4/SDA - PA5/RES - PA6/DC  - PA7/CS  - PC4/BL  - PC5
 
 - 按键
 
-K1 - PB1 - 下拉
-K2 - PB2 - 上拉
-K3 - PB10 - 上拉
-K4 - PB11 - 上拉
+K1 - PB1 - 下拉/K2 - PB2 - 上拉/K3 - PB10 - 上拉/K4 - PB11 - 上拉
 
 - LED
 
-LD1 - PA15 - 红色
-LD2 - PC10 - 绿色
-LD3 - PC11 - 蓝色
-LD4 - PC12 - 黄色
+LD1 - PA15 - 红色/LD2 - PC10 - 绿色/LD3 - PC11 - 蓝色/LD4 - PC12 - 黄色
 
 ### 疫情数据API 
 
@@ -104,17 +92,19 @@ JSON数据：
 
 这个接口仅包含了全球和国内的疫情数据，如累计确诊、现存确诊、累计治愈、累计死亡等。数据大小约1300字节。疫情新闻，省市数据，辟谣信息等API接口可以查看：https://lab.isaaclin.cn/nCoV
 
-作者的主页：https://isaaclin.cn/，**特此感谢。**
+作者的主页：https://isaaclin.cn
+
+**特此感谢。**
 
 ### 其他项目
 
-- 基于PC端Windows/Linux的疫情监控平台
+- [基于PC端Windows/Linux的疫情监控平台](http://www.wangchaochao.top/2020/02/15/qt-ncov-2/)
 
-  `https://github.com/whik/qt_2019_ncov`
+  https://github.com/whik/qt_2019_ncov
 
-- 基于嵌入式Linux的疫情监控平台
+- [基于嵌入式Linux的疫情监控平台](http://www.wangchaochao.top/2020/03/22/YA157C-4-Functional-interface-redesign/)
 
-  `https://github.com/whik/qte_2019_ncov`
+  https://github.com/whik/qte_2019_ncov
 
 ### 关于我
 

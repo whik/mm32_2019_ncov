@@ -125,8 +125,9 @@ uint8_t parse_ncov_data(struct ncov_data *dataChina, struct ncov_data *dataGloba
                 
                 /* 毫秒级时间戳转字符串 */
                 updateTime = (time_t )(cJSON_GetObjectItem(results, "updateTime")->valuedouble/1000);
+                updateTime += 8*60*60; /* UTC8校正 */
                 time = localtime(&updateTime);
-                time->tm_hour += 8;     /* UTC8校正 */
+                /* 格式化时间 */
                 strftime(dataChina->updateTime, 20, "%m-%d %H:%M", time);
                 printf("更新于:%s\r\n", dataChina->updateTime);/* 06-24 11:21 */
                 led_set(4, ON);
@@ -134,8 +135,8 @@ uint8_t parse_ncov_data(struct ncov_data *dataChina, struct ncov_data *dataGloba
         }
     }
 
-    cJSON_Delete(results);
-    cJSON_Delete(results_arr);
+//    cJSON_Delete(results);
+//    cJSON_Delete(results_arr);
     cJSON_Delete(root);
 
     printf("*********更新完成*********\r\n");
